@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Task2" Height="450" Width="800">
     <StackPanel>
-        
+        <Button Content="Загрузить изображения" Click="LoadImagesButton_Click"/>
+        <Image x:Name="UserImage" Width="100" Height="100"></Image>
     </StackPanel>
 </Window>

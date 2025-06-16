@@ -23,5 +23,10 @@ namespace LabWork42
         {
             InitializeComponent();
         }
+
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

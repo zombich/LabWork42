@@ -1,5 +1,4 @@
 ﻿using Microsoft.Win32;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -24,16 +23,15 @@ namespace LabWork42
                 return;
 
             inkCanvas.Children.Clear();
-
-            var bitmapImage = new BitmapImage(new Uri(openFileDialog.FileName));
-            var image = new Image();
+            BitmapImage bitmapImage = new(new Uri(openFileDialog.FileName));
+            Image image = new();
             image.Source = bitmapImage;
             inkCanvas.Children.Add(image);
         }
 
         private void ChangeColorButton_Click(object sender, RoutedEventArgs e)
         {
-            ColorPicker picker = new ColorPicker();
+            ColorPicker picker = new();
             if (picker.ShowDialog() == false)
                 return;
             inkCanvas.DefaultDrawingAttributes.Color = Color.FromRgb(picker.Red, picker.Green, picker.Blue);

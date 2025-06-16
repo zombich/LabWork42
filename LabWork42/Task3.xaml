@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LabWork42"
         mc:Ignorable="d"
         Title="Task3" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <MediaElement MediaEnded="MediaElement_MediaEnded"/>
+    </StackPanel>
 </Window>
