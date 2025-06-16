@@ -17,6 +17,5 @@
         <Button Click="Task2Button_Click">Task2</Button>
         <Button Click="Task3Button_Click">Task3</Button>
         <Button Click="Task4Button_Click">Task4</Button>
-        <Button Click="Task5Button_Click">Task5</Button>
     </StackPanel>
 </Window>

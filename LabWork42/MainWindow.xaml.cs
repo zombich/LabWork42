@@ -51,13 +51,5 @@ namespace LabWork42
             task.ShowDialog();
             Show();
         }
-
-        private void Task5Button_Click(object sender, RoutedEventArgs e)
-        {
-            Task5 task = new();
-            Hide();
-            task.ShowDialog();
-            Show();
-        }
     }
 }

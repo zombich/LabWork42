@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabWork42"
         mc:Ignorable="d"
-        Title="Task3" Height="450" Width="800">
-    <StackPanel>
-        <MediaElement MediaEnded="MediaElement_MediaEnded"/>
-    </StackPanel>
+        Title="Task3" Height="450" Width="800" FontSize="18">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <MediaElement x:Name="SoundMediaElement"/>
+        <MediaElement Source="Videos\parkour.mp4" Height="100" Stretch="Fill" MediaEnded="MediaElement_MediaEnded" DockPanel.Dock="Top"/>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="1" Click="Button_Click"/>
+            <Button Content="2" Click="Button_Click_1"/>
+            <Button Content="3" Click="Button_Click_2"/>
+            <Button Content="4" Click="Button_Click_3"/>
+            <Button Content="5" Click="Button_Click_4"/>
+        </WrapPanel>
+    </DockPanel>
 </Window>

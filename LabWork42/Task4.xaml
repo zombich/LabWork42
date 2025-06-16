@@ -6,7 +6,38 @@
         xmlns:local="clr-namespace:LabWork42"
         mc:Ignorable="d"
         Title="Task4" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel>
+            <Button DockPanel.Dock="Top" Content="Выбрать файлы" Click="AddMediaButton_Click"/>
+            <Button DockPanel.Dock="Bottom" Content="Воспроизвести файл" Click="PlayMediaButton_Click"/>
+            <ListView Width="300" x:Name="FilesListView">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Название</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <MediaElement Source="Videos\parkour.mp4" LoadedBehavior="Manual" Name="MediaPlayer" DockPanel.Dock="Top" Stretch="Fill" Margin="20"/>
+        <StackPanel Grid.Row="1" DockPanel.Dock="Bottom">
+            <Label Name="TimeLabel" Content="00:00:00 | 00:00:00" HorizontalContentAlignment="Center" Margin="5" />
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Name="PlayButton" Click="PlayButton_Click">Воспроизведение</Button>
+                <Button Name="PauseButton" Click="PauseButton_Click">Пауза</Button>
+                <Button Name="StopButton" Click="StopButton_Click">Стоп</Button>
+            </WrapPanel>
+        </StackPanel>
+        </Grid>
+    </DockPanel>
 </Window>
