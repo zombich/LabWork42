@@ -62,9 +62,7 @@ namespace LabWork42
             openFileDialog.Multiselect = true;
             if (openFileDialog.ShowDialog() == false)
                 return;
-
-            //Uri file = new Uri(openFileDialog.FileName);
-            //MediaPlayer.Source = file;
+                
             List<FileInfo> files = new List<FileInfo>();
             foreach (string file in openFileDialog.FileNames)
                 files.Add(new FileInfo(file));
